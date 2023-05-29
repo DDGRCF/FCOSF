@@ -20,10 +20,7 @@ parts/
 sdist/
 var/
 wheels/
-<<<<<<< HEAD
-=======
 share/python-wheels/
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
 *.egg-info/
 .installed.cfg
 *.egg
@@ -42,25 +39,19 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-<<<<<<< HEAD
-=======
 .nox/
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-<<<<<<< HEAD
 .hypothesis/
 .pytest_cache/
-=======
 *.py,cover
 .hypothesis/
 .pytest_cache/
 cover/
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
 
 # Translations
 *.mo
@@ -70,10 +61,7 @@ cover/
 *.log
 local_settings.py
 db.sqlite3
-<<<<<<< HEAD
-=======
 db.sqlite3-journal
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
 
 # Flask stuff:
 instance/
@@ -86,16 +74,12 @@ instance/
 docs/_build/
 
 # PyBuilder
-<<<<<<< HEAD
-=======
 .pybuilder/
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
 target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-<<<<<<< HEAD
 # pyenv
 .python-version
 
@@ -165,7 +149,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-<<<<<<< HEAD
 
 mmdet/version.py
 data/
@@ -189,6 +172,7 @@ work_dirs/
 
 # me
 
+# vim
 my_exps/test/
 .vim/
 pyright.sh
@@ -197,7 +181,9 @@ pyright.sh
 .pre-commit-config.yaml
 .style.yapf
 pytest.ini
-=======
+
+
+# pycharm
 .dmypy.json
 dmypy.json
 
@@ -210,10 +196,3 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# OBBDetection
+# FCOSF
 
 **note**: If you have questions or good suggestions, feel free to propose issues and contact me.
 
@@ -141,8 +140,3 @@ This is the official implement of [Oriented R-CNN](configs/obb/oriented_rcnn). i
   year = {2021},
   pages = {3520-3529} }
 ```
-=======
-# FCOSF
-Learing Orientation-aware Distances for Orientation Object Detection
-Code will be released soon.
->>>>>>> ce3dfd376117fcd33be1610f3edc831aba77d25e
