@@ -25,7 +25,7 @@ echo -e "\033[34m*******************************\033[0m"
 
 config=$1
 work_dir=$2
-cuda=$3
+cuda=${3:0}
 
 if [ -z ${config} ]; then 
   echo -e "\033[31mconfig can't be null\033[0m"

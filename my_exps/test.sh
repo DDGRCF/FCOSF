@@ -6,6 +6,7 @@ echo -e "\033[34m*******************************\033[0m"
 echo -e "\033[31mactivate env ${env}\033[0m"
 echo -e "\033[34m*******************************\033[0m"
 echo -e "\033[34mCurrent dir is ${PWD}\033[0m"
+
 config=$1
 ckpt=$2
 save_dir=$3
