@@ -9,7 +9,7 @@ from mmdet.core.bbox.transforms_obb import distance2obb
 from mmdet.core.bbox.transforms import distance2bbox
 
 @BBOX_CODERS.register_module()
-class OBB2DISTCoder(BaseBBoxCoder):
+class OBB2DistCoder(BaseBBoxCoder):
     def __init__(self, 
                target_means=(0., 0., 0., 0., 0.),
                target_stds=(1., 1., 1., 1., 1.)):
@@ -76,14 +76,3 @@ def dist2obb(proposals,
     else:
         raise NotImplementedError
     return bboxes
-
-
-            
-
-
-
-
-
-    
-
-

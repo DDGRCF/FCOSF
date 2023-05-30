@@ -114,6 +114,7 @@ test_pipeline = [
             dict(type='OBBCollect', keys=['img']),
         ])
 ]
+
 data = dict(
     samples_per_gpu=2,
     workers_per_gpu=4,

@@ -7,6 +7,7 @@
 # activate your python env
 env=your_env # note: reset your env
 source /path/to/your/anaconda3/etc/profile.d/conda.sh # note: reset your env
+
 if [ $? -ne 0 ]; then
   echo -e "\033[31msource conda path fail! please check your setting\033[0m"
   exit 1

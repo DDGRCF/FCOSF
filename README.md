@@ -13,7 +13,7 @@ This is the official implementation of [FCOSF](https://ieeexplore.ieee.org/docum
 ## Update
 
 - (**2023-05-29**) Release [FCOSF](configs/fcosf/fcosf_r50.py)🔥.
-- (**2023-05-29**) Release [MMRotate Implementation](git@github.com:DDGRCF/FCOSF-MMRotate.git) (stay tuning)🙍.
+- (**2023-05-29**) Release [MMRotate Implementation](https://github.com/DDGRCF/FCOSF) stay tuning🙍.
 
 ## Installation
 
@@ -27,9 +27,10 @@ If you want to train or test a oriented model, please refer to [oriented_model_s
 
 ### How to Start FCOSF
 
+To help you start quickly, I prepare a simple bash script
+
 #### Train
 
-To help you start quickly, I prepare a simple bash script
 
 ```bash
 config=/path/to/config && work_dir=/path/to/work_dir && cuda=(device_id, like 1, 2, 3 ...)
