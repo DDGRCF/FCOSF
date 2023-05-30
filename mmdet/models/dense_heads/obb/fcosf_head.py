@@ -69,8 +69,8 @@ class FCOSFHead(OBBAnchorFreeHead):
 
         theta_offsets = torch.tensor([2., 1., 0., 3.]) * pi/2
         theta_multiplier = torch.arange(1, self.num_fourier_pairs+1).float()
-        self.register_buffer('theta_offsets', theta_offsets.view(-1, 1))
-        self.register_buffer('theta_multiplier', theta_multiplier.view(1, -1))
+        self.register_buffer('theta_offsets', theta_offsets.reshape(-1, 1))
+        self.register_buffer('theta_multiplier', theta_multiplier.reshape(1, -1))
 
     def _init_layers(self):
         """Initialize layers of the head."""
@@ -218,6 +218,7 @@ class FCOSFHead(OBBAnchorFreeHead):
             pos_reg_preds = self.fourier_decode(pos_reg_preds, pos_angle_targets)
             decoded_bbox_preds = distance2bbox(pos_points, pos_reg_preds)
             decoded_bbox_targets = distance2bbox(pos_points, pos_dist_targets)
+
             loss_bbox = self.loss_bbox(
                 decoded_bbox_preds,
                 decoded_bbox_targets,
@@ -531,9 +532,12 @@ class FCOSFHead(OBBAnchorFreeHead):
 
     def fourier_decode(self, fourier_coeff, theta_preds):
         theta = (theta_preds[..., None] + self.theta_offsets) * self.theta_multiplier
+
         Cos, Sin = torch.cos(theta), torch.sin(theta)
         One = Cos.new_ones((theta.size(0), 4, 1))
+
         trig_vector = torch.cat([One, Cos, Sin], dim=-1)
         decoded_dist = torch.matmul(trig_vector, fourier_coeff[..., None]).squeeze(-1) # [n, 4, 9] x [n, 9, 1]
+
         #  return torch.where(decoded_dist > 0, decoded_dist + 1, decoded_dist.exp())
         return F.relu(decoded_dist)

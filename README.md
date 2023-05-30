@@ -1,8 +1,9 @@
 <div align="center"> 
 
-<h1>FCOSF🚀</h1> 
+<h1>✨FCOSF✨</h1> 
 
-**Offical Implementation for Learning Orientation-aware Distances for Oriented Object Detection**
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=18&pause=1000&color=7E58F7&center=true&vCenter=true&width=800&lines=Learning+Orientation-aware+Distances+for+Oriented+Object+Detection)](https://git.io/typing-svg)
+
 
 </div>
 
@@ -33,7 +34,7 @@ To help you start quickly, I prepare a simple bash script
 
 
 ```bash
-config=/path/to/config && work_dir=/path/to/work_dir && cuda=(device_id, like 1, 2, 3 ...)
+config=/path/to/config && work_dir=/path/to/work_dir && cuda=(device_id, like 0, 1, 2, 3 ...)
 bash my_exps/train.sh ${config} ${work_dir} ${cuda}
 ```
 
@@ -44,7 +45,7 @@ config=/path/to/config && ckpt=/path/to/checkpoint && save_dir=/path/to/results_
 bash my_exps/test.sh ${config} ${ckpt} ${save_dir} ${cuda}
 ```
 
-### How to Deploy the FCOSF
+### How to Deploy FCOSF
 
 TODO:
 
